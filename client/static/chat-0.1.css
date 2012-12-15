@@ -1,0 +1,55 @@
+#goyaka-chat {
+    width : 250px;
+    position : fixed;
+    bottom : 0px;
+    right : 0px;
+    margin : 0 20px;
+    z-index : 9999999999;
+    display : block !important;
+}
+
+#goyaka-chat .goyaka-chatbox {
+    height : 212px;
+}
+
+#goyaka-chat .goyaka-conversation {
+    border-left : 1px solid #EDEDED;
+    border-right : 1px solid #EDEDED;
+    height: 170px;
+    overflow: auto;
+    background-color : #fff;
+}
+
+#goyaka-chat .goyaka-chat-input {
+    border-left : 1px solid #EDEDED;
+    border-right : 1px solid #EDEDED;
+    background-color : #fff;
+    text-align : center;
+}
+
+#goyaka-chat .goyaka-chat-input input {
+    display: inline-block;
+    margin-bottom: 16px;
+    width : 225px;
+    border : 1px solid #CDCDCD;
+    border-radius : 2px;
+}
+
+#goyaka-chat .goyaka-menu {
+    background-color : #57663D;
+    padding : 10px;
+    border-top-right-radius : 5px;
+    border-top-left-radius : 5px;
+    color : #fff;
+    font-size : 14px;
+    cursor : pointer;
+}
+
+#goyaka-chat .goyaka-menu a {
+    color : #fff;
+    text-decoration : none;
+}
+
+#goyaka-chat .goyaka-menu a:hover {
+    text-decoration : underline;
+}
