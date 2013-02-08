@@ -1,7 +1,11 @@
 Opensource Olark
 ================
 
-Tried building my own version of Olark. Jabber, nodejs, socket.io and python helped me.
+Tried building my own version of Olark. Jabber, nodejs, socket.io and python helped me. 
+
+
+This is actually a proof of concept. This can add popup on any window and admins can chat using Jabber clients (adium, etc).
+It doesn't have any auth mechanism built it, but it can be added easily using the auth.py file.
 
 Installation
 =============
