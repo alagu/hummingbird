@@ -89,7 +89,7 @@ Nodejs connects to jabber and creates a nodejs jabber server, to be connected to
   Install Node JS - https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager (latest version 0.6.2 as of now)
 
 ```
-  sudo apt-get install python-software-properties
+  sudo apt-get install python-software-properties  software-properties-common
   sudo add-apt-repository ppa:chris-lea/node.js
   sudo apt-get update
   sudo apt-get install nodejs
@@ -99,7 +99,7 @@ Install NPM
 ------------
 
 ```
-  sudo -s; curl http://npmjs.org/install.sh | sh
+  sudo -s; curl https://npmjs.org/install.sh | sh
  
   npm install node-xmpp # For talking to jabber
   npm install socket.io # For talking to browser
