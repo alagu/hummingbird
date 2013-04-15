@@ -20,8 +20,10 @@ Install eJabberd
 
 ```
   sudo apt-get install ejabberd
+  git clone git://github.com/alagu/opensource-olark.git
+  cd opensource-olark
   sudo -s
-  cp auth.py /etc/ejabberd/
+  cp server/setup/auth.py /etc/ejabberd/
 ```
 
 Edit Ejabberd Config
@@ -30,6 +32,11 @@ Edit Ejabberd Config
 ```
   cd /etc/ejabberd
   vim ejabberd.cfg
+```
+
+Remove:
+```
+{auth_method, internal}.
 ```
 
 Change:
@@ -41,6 +48,11 @@ Change:
  {extauth_program, "/etc/ejabberd/auth.py"}.
  {extauth_cache, 600}.
  {extauth_instances, 5}.
+```
+
+Also add hosts.
+```
+{hosts, ["localhost", "chat.alagu.net"]}
 ```
 
 (Save)
@@ -55,7 +67,7 @@ Create SRV Record
 ------------------
 This is bit tricky. You have to configure your DNS to add SRV records. (Example http://library.linode.com/communications/xmpp/ejabberd/ubuntu-8.04-hardy#sph_xmpp-jabber-basics)
 
-Try logging into the jabber server. Use pidgin/adium.
+Try logging into the jabber server. Use pidgin/adium. 
 
 Any username(Say joe@localhost), any password should connect to your machine.
 
