@@ -1,4 +1,4 @@
-#goyaka-chat {
+#converse-chat {
     width : 250px;
     position : fixed;
     bottom : 0px;
@@ -8,36 +8,50 @@
     display : block !important;
 }
 
-#goyaka-chat .goyaka-chatbox {
-    height : 212px;
+#converse-chat .converse-chatbox {
+    height : 220px;
 }
 
-#goyaka-chat .goyaka-conversation {
+#converse-chat .converse-conversation {
     border-left : 1px solid #EDEDED;
     border-right : 1px solid #EDEDED;
     height: 170px;
-    overflow: auto;
     background-color : #fff;
+    padding: 5px 12px 0 12px;
+    overflow: scroll;
+    font-size: 14px;
+    font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
 }
 
-#goyaka-chat .goyaka-chat-input {
+
+#converse-chat .converse-chat-input, 
+#converse-chat #converse-status {
     border-left : 1px solid #EDEDED;
     border-right : 1px solid #EDEDED;
     background-color : #fff;
     text-align : center;
 }
 
-#goyaka-chat .goyaka-chat-input input {
+#converse-chat #converse-status {
+    font-size: 10px;
+    padding-top: 2px;
+    font-family: monospace;
+    padding-bottom:16px;
+}
+
+#converse-chat .converse-chat-input input {
     display: inline-block;
-    margin-bottom: 16px;
+    margin-bottom: 0px;
     width : 225px;
     border : 1px solid #CDCDCD;
     border-radius : 2px;
-    font-size: 16px;
+    font-size: 14px;
     padding: 3px 0px;
+    font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+    padding: 4px;
 }
 
-#goyaka-chat .goyaka-menu {
+#converse-chat .converse-menu {
     background-color : #57663D;
     padding : 10px;
     border-top-right-radius : 5px;
@@ -45,13 +59,30 @@
     color : #fff;
     font-size : 14px;
     cursor : pointer;
+    font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
 }
 
-#goyaka-chat .goyaka-menu a {
+#converse-chat .converse-menu a {
     color : #fff;
     text-decoration : none;
 }
 
-#goyaka-chat .goyaka-menu a:hover {
-    text-decoration : underline;
+#converse-chat .converse-menu a:hover {
+    text-decoration : none;
+}
+
+#converse-chat .converse-self {
+    
+}
+
+.converse-msg {
+    margin-bottom: 3px;
+}
+
+.converse-self .converse-user {
+    color: #444;
+}
+
+.converse-user {
+    color: #189466;
 }
