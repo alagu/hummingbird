@@ -106,27 +106,12 @@ Test Jabber Installation
   echo "Testing goyaka chat" | sendxmpp alagu@chat.goyaka.com
 ```
 
-Install Nodejs
---------------
-Nodejs connects to jabber and creates a nodejs jabber server, to be connected to browsers using socket.io.
+Get the chat widget
+-------------------
+
+Once this is done, get your admin account logged in Adium. (Note: None of this is ACL protected)
+
+![Adium configuration](http://cl.ly/image/2D1E413t1Q0M/Screen%20Shot%202013-04-16%20at%2011.20.36%20AM.png)
 
 
-  Install Node JS - https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager (latest version 0.6.2 as of now)
-
-```
-  sudo apt-get install python-software-properties  software-properties-common
-  sudo add-apt-repository ppa:chris-lea/node.js
-  sudo apt-get update
-  sudo apt-get install nodejs
-```
-
-Install NPM
-------------
-
-```
-  sudo -s; curl https://npmjs.org/install.sh | sh
- 
-  npm install node-xmpp # For talking to jabber
-  npm install socket.io # For talking to browser
-  npm install geoip-lite # For querying IP
-```
+Copy the javascript/css in client. Look at how test.html uses the embeddable widget. [**Try the DEMO**](http://demolink.net)
