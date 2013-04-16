@@ -42,7 +42,7 @@ Remove:
 Change:
 
 ```
- {acl, admin, {user, "alagu", "localhost"}}
+ {acl, admin, {user, "alagu", "localhost"}}.
 
  {auth_method, external}.
  {extauth_program, "/etc/ejabberd/auth.py"}.
@@ -55,9 +55,21 @@ Also add hosts.
 {hosts, ["localhost", "chat.alagu.net"]}
 ```
 
+Add mod_http_bind module
+
+```
+{modules ,
+ [
+  ...
+  {mod_http_bind,  []},
+  ...
+ ]
+}
+```
+
 (Save)
 
-Create admin user:
+Create admin user in commandline:
 
 ```
   sudo ejabberdctl register alagu localhost mypassword
@@ -70,6 +82,15 @@ This is bit tricky. You have to configure your DNS to add SRV records. (Example 
 Try logging into the jabber server. Use pidgin/adium. 
 
 Any username(Say joe@localhost), any password should connect to your machine.
+
+Here is my linode configuration:
+
+![Linode configuration](http://cl.ly/image/3m141k1X3P2r/Screen%20Shot%202013-04-16%20at%208.20.00%20AM.png)
+
+Single item entry:
+![Entering an item](http://cl.ly/image/3z3h1g2X0E0B/Screen%20Shot%202013-04-16%20at%208.21.57%20AM.png)
+
+
 
 
 Test Jabber Installation
