@@ -1,1 +1,1 @@
-cat jquery.js chat-client.js > chat.js
+cat jquery.js strophe.js chat-client.js > chat.js
