@@ -2,11 +2,12 @@ var server = require("http").createServer();
 var socket = require("socket.io").listen(server);
 var xmpp = require("node-xmpp");
 socket.on("connection", function(connection) {
- var client = new xmpp.Client({jid: "charlvn@jabber.co.za", password: ""});
+ var client = new xmpp.Client({jid: "test@localhost", password: ""});
  client.on("online", function() {
   client.send(new xmpp.Element("presence", {type: "chat"}));
+  client.send(new xmpp.Element("message", {to: "alagu@localhost", type: "chat"}).c("body").t("Testing"));
   connection.on("message", function(message) {
-   client.send(new xmpp.Element("message", {to: "charlvn@charlvn.com", type: "chat"}).c("body").t(message));
+   client.send(new xmpp.Element("message", {to: "alagu@localhost", type: "chat"}).c("body").t(message));
   });
   connection.on("disconnect", function() {
    client.end();
