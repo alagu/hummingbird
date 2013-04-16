@@ -7,7 +7,7 @@ Tried building my own version of Olark. Jabber, nodejs, socket.io and python hel
 This is actually a proof of concept. This can add popup on any window and admins can chat using Jabber clients (adium, etc).
 It doesn't have any auth mechanism built it, but it can be added easily using the auth.py file.
 
-*Warning: There is no ACL added here. But it is easy to add*
+**Warning: There is no ACL added here. But it is easy to add**
 
 Installation
 =============
