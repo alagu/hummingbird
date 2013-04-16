@@ -94,9 +94,6 @@ Here is my linode configuration:
 Single item entry:
 ![Entering an item](http://cl.ly/image/3z3h1g2X0E0B/Screen%20Shot%202013-04-16%20at%208.21.57%20AM.png)
 
-
-
-
 Test Jabber Installation
 -------------------------
 ```
@@ -106,27 +103,53 @@ Test Jabber Installation
   echo "Testing goyaka chat" | sendxmpp alagu@chat.goyaka.com
 ```
 
-Install Nodejs
---------------
-Nodejs connects to jabber and creates a nodejs jabber server, to be connected to browsers using socket.io.
+Get the chat widget
+-------------------
 
+Go to the (client folder)[https://github.com/alagu/opensource-olark/tree/master/client].
 
-  Install Node JS - https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager (latest version 0.6.2 as of now)
-
-```
-  sudo apt-get install python-software-properties  software-properties-common
-  sudo add-apt-repository ppa:chris-lea/node.js
-  sudo apt-get update
-  sudo apt-get install nodejs
-```
-
-Install NPM
-------------
+Edit chat-client.js and configure (in client/static):
 
 ```
-  sudo -s; curl https://npmjs.org/install.sh | sh
- 
-  npm install node-xmpp # For talking to jabber
-  npm install socket.io # For talking to browser
-  npm install geoip-lite # For querying IP
+ var BOSH_SERVICE = 'http://olark.alagu.net:5280/http-bind';
+ var JABBER_HOST  = 'olark.alagu.net';
+ var ADMIN_USER   = 'alagu@olark.alagu.net';
 ```
+
+Set them to right variables and build chat.js
+
+```
+bash compile.sh
+```
+
+This compiles all javascript files to single chat.js. Copy following files to your assets directory.
+
+```
+client/
+  static/
+    chat-0.1.css
+    chat.js
+```
+
+Now, insert these two lines in your product html.
+```
+<link rel="stylesheet" type="text/css" href="<yourstaticpath>/chat-0.1.css">
+<script src="<yourstaticpath>/chat.js" type="text/javascript"></script>
+```
+
+Try the DEMO.
+
+
+Adium configuration
+--------------------
+
+Once this is done, get your admin account logged in Adium. (Note: None of this is ACL protected)
+Username should be admin@yourdomain.com and password could be anything.
+
+![Screenshot](http://cl.ly/image/2D1E413t1Q0M/Screen%20Shot%202013-04-16%20at%2011.20.36%20AM.png)
+
+
+ACL
+---
+
+The auth.py defines the acl for each account. You could tie up a sqlite/mysql db which holds the auth mechanism.
