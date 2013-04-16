@@ -55,9 +55,21 @@ Also add hosts.
 {hosts, ["localhost", "chat.alagu.net"]}
 ```
 
+Add mod_http_bind module
+
+```
+{modules ,
+ [
+  ...
+  {mod_http_bind,  []},
+  ...
+ ]
+}
+```
+
 (Save)
 
-Create admin user:
+Create admin user in commandline:
 
 ```
   sudo ejabberdctl register alagu localhost mypassword
