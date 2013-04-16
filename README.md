@@ -74,6 +74,8 @@ Any username(Say joe@localhost), any password should connect to your machine.
 Here is my linode configuration:
 
 ![Linode configuration](http://cl.ly/image/3m141k1X3P2r/Screen%20Shot%202013-04-16%20at%208.20.00%20AM.png)
+
+Single item entry:
 ![Entering an item](http://cl.ly/image/3z3h1g2X0E0B/Screen%20Shot%202013-04-16%20at%208.21.57%20AM.png)
 
 
