@@ -69,7 +69,7 @@ Add mod_http_bind module
 }
 ```
 
-(Save)
+(Save and Quit vim)
 
 Here is a sample ejabberd cfg which works for me: [ejabberd.cfg](https://github.com/alagu/opensource-olark/blob/master/server/setup/ejabberd.cfg.sample)
 
