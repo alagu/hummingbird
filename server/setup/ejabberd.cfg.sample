@@ -566,6 +566,7 @@
   {mod_configure,[]}, % requires mod_adhoc
   {mod_admin_extra, []},
   {mod_disco,    []},
+  {mod_http_bind,  []},
   %%{mod_echo,   [{host, "echo.localhost"}]},
   {mod_irc,      []},
   %% NOTE that mod_http_fileserver must also be enabled in the
