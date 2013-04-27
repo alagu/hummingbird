@@ -32,6 +32,9 @@ p {
 
 table {
   margin: 15px auto;
+  border: 1px solid #ccc;
+  padding: 4px;
+  border-radius: 3px;
 }
 
 th {
@@ -39,21 +42,58 @@ th {
  text-align: right;
 }
 
-.humming-bg {
-  position: absolute;
-  opacity: 0.3;
-  filter: alpha(opacity=20);
-  margin: 0 auto;
-  left: 32%;
+.wrap {
+  width: 900px;
+  border: 2px solid #444;
+  border-radius: 3px;
+  margin-left: 18%;
+  margin-top: 6%;
 }
+
+.humming-bg {
+  width: 400px;
+  float: left;
+}
+
+.project-details {
+  width: 500px;
+  float: left;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+ 
+.clearfix {
+  display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+  display: block;
+}
+ 
+* html .clearfix {
+  height: 1%;
+}
+
+
+
 </style>
 <title>Hummingbird (Previously known as Opensource Olark)</title>
 </head>
 <body>
 
+<div class="wrap clearfix">
+
 <div class="humming-bg">
-  <img src="http://farm1.staticflickr.com/199/496387464_0995c6bf93.jpg" />
+  <img src="http://farm1.staticflickr.com/199/496387464_0995c6bf93.jpg" width="400" />
 </div>
+<div class="project-details">
 
 <h1>
   Hummingbird Demo
@@ -71,8 +111,10 @@ th {
     <tr><th>Password: </td><td> doesntmatter </td></tr>
   </table>
 
-
-
+  Start chatting below.
 </p>
+</div>
+</div>
+
 </body>
 </html>
