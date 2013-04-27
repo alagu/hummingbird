@@ -1,7 +1,7 @@
 Hummingbird
 ================
 
-Tried building my own version of Olark. Jabber and Strophe.js helped me. (**Previously known as Opensource Olark**)
+Tried building my own version of Olark. Jabber and Strophe.js helped me. ( **Previously known as Opensource Olark** )
 
 
 ![Hummingbird](http://farm1.staticflickr.com/199/496387464_0995c6bf93.jpg)
