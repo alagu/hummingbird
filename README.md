@@ -1,13 +1,15 @@
-Opensource Olark
+Hummingbird
 ================
 
-Tried building my own version of Olark. Jabber, nodejs, socket.io and python helped me. 
+Tried building my own version of Olark. Jabber and Strophe.js helped me. (**Previously known as Opensource Olark**)
 
 
-This is actually a proof of concept. This can add popup on any window and admins can chat using Jabber clients (adium, etc).
+![Hummingbird](http://farm1.staticflickr.com/199/496387464_0995c6bf93.jpg)
+
+This can add popup on any window and admins can chat using Jabber clients (adium, etc).
 It doesn't have any auth mechanism built it, but it can be added easily using the auth.py file.
 
-[**TRY DEMO**](http://alagu.github.io/opensource-olark/)
+[**TRY DEMO**](http://alagu.github.io/hummingbird/)
 =============
 
 **Warning: There is no ACL added here. But it is easy to add**
@@ -25,8 +27,8 @@ Install eJabberd
 
 ```
   sudo apt-get install ejabberd
-  git clone git://github.com/alagu/opensource-olark.git
-  cd opensource-olark
+  git clone git://github.com/alagu/hummingbird.git
+  cd hummingbird
   sudo -s
   cp server/setup/auth.py /etc/ejabberd/
 ```
@@ -74,7 +76,7 @@ Add mod_http_bind module
 
 (Save and Quit vim)
 
-Here is a sample ejabberd cfg which works for me: [ejabberd.cfg](https://github.com/alagu/opensource-olark/blob/master/server/setup/ejabberd.cfg.sample)
+Here is a sample ejabberd cfg which works for me: [ejabberd.cfg](https://github.com/alagu/hummingbird/blob/master/server/setup/ejabberd.cfg.sample)
 
 Create admin user in commandline:
 
@@ -109,7 +111,7 @@ Test Jabber Installation
 Get the chat widget
 -------------------
 
-Go to the (client folder)[https://github.com/alagu/opensource-olark/tree/master/client].
+Go to the (client folder)[https://github.com/alagu/hummingbird/tree/master/client].
 
 Edit chat-client.js and configure (in client/static):
 
